@@ -1,0 +1,183 @@
+
+
+================================================================
+== Vivado HLS Report for 'ereg_v1_entry8'
+================================================================
+* Date:           Wed Apr  5 19:39:38 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 1.458 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|       2|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|     108|    -|
+|Register             |        -|      -|        3|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|        3|     110|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1  |    or    |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |Total            |          |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_done                    |   9|          2|    1|          2|
+    |input_0_V_read_out_blk_n   |   9|          2|    1|          2|
+    |input_11_V_read_out_blk_n  |   9|          2|    1|          2|
+    |input_12_V_read_out_blk_n  |   9|          2|    1|          2|
+    |input_13_V_read_out_blk_n  |   9|          2|    1|          2|
+    |input_14_V_read_out_blk_n  |   9|          2|    1|          2|
+    |input_15_V_read_out_blk_n  |   9|          2|    1|          2|
+    |input_16_V_read_out_blk_n  |   9|          2|    1|          2|
+    |input_17_V_read_out_blk_n  |   9|          2|    1|          2|
+    |input_1_V_read_out_blk_n   |   9|          2|    1|          2|
+    |input_2_V_read_out_blk_n   |   9|          2|    1|          2|
+    |real_start                 |   9|          2|    1|          2|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 108|         24|   12|         24|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |ap_CS_fsm       |  1|   0|    1|          0|
+    |ap_done_reg     |  1|   0|    1|          0|
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  3|   0|    3|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+---------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++----------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                      |  in |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|ap_rst                      |  in |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|ap_start                    |  in |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|start_full_n                |  in |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|ap_done                     | out |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|ap_continue                 |  in |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|ap_idle                     | out |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|ap_ready                    | out |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|start_out                   | out |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|start_write                 | out |    1| ap_ctrl_hs |    ereg_v1.entry8   | return value |
+|input_0_V_read              |  in |   16|   ap_none  |    input_0_V_read   |    scalar    |
+|input_1_V_read              |  in |   16|   ap_none  |    input_1_V_read   |    scalar    |
+|input_2_V_read              |  in |   16|   ap_none  |    input_2_V_read   |    scalar    |
+|input_11_V_read             |  in |   16|   ap_none  |   input_11_V_read   |    scalar    |
+|input_12_V_read             |  in |   16|   ap_none  |   input_12_V_read   |    scalar    |
+|input_13_V_read             |  in |   16|   ap_none  |   input_13_V_read   |    scalar    |
+|input_14_V_read             |  in |   16|   ap_none  |   input_14_V_read   |    scalar    |
+|input_15_V_read             |  in |   16|   ap_none  |   input_15_V_read   |    scalar    |
+|input_16_V_read             |  in |   16|   ap_none  |   input_16_V_read   |    scalar    |
+|input_17_V_read             |  in |   16|   ap_none  |   input_17_V_read   |    scalar    |
+|input_0_V_read_out_din      | out |   16|   ap_fifo  |  input_0_V_read_out |    pointer   |
+|input_0_V_read_out_full_n   |  in |    1|   ap_fifo  |  input_0_V_read_out |    pointer   |
+|input_0_V_read_out_write    | out |    1|   ap_fifo  |  input_0_V_read_out |    pointer   |
+|input_1_V_read_out_din      | out |   16|   ap_fifo  |  input_1_V_read_out |    pointer   |
+|input_1_V_read_out_full_n   |  in |    1|   ap_fifo  |  input_1_V_read_out |    pointer   |
+|input_1_V_read_out_write    | out |    1|   ap_fifo  |  input_1_V_read_out |    pointer   |
+|input_2_V_read_out_din      | out |   16|   ap_fifo  |  input_2_V_read_out |    pointer   |
+|input_2_V_read_out_full_n   |  in |    1|   ap_fifo  |  input_2_V_read_out |    pointer   |
+|input_2_V_read_out_write    | out |    1|   ap_fifo  |  input_2_V_read_out |    pointer   |
+|input_11_V_read_out_din     | out |   16|   ap_fifo  | input_11_V_read_out |    pointer   |
+|input_11_V_read_out_full_n  |  in |    1|   ap_fifo  | input_11_V_read_out |    pointer   |
+|input_11_V_read_out_write   | out |    1|   ap_fifo  | input_11_V_read_out |    pointer   |
+|input_12_V_read_out_din     | out |   16|   ap_fifo  | input_12_V_read_out |    pointer   |
+|input_12_V_read_out_full_n  |  in |    1|   ap_fifo  | input_12_V_read_out |    pointer   |
+|input_12_V_read_out_write   | out |    1|   ap_fifo  | input_12_V_read_out |    pointer   |
+|input_13_V_read_out_din     | out |   16|   ap_fifo  | input_13_V_read_out |    pointer   |
+|input_13_V_read_out_full_n  |  in |    1|   ap_fifo  | input_13_V_read_out |    pointer   |
+|input_13_V_read_out_write   | out |    1|   ap_fifo  | input_13_V_read_out |    pointer   |
+|input_14_V_read_out_din     | out |   16|   ap_fifo  | input_14_V_read_out |    pointer   |
+|input_14_V_read_out_full_n  |  in |    1|   ap_fifo  | input_14_V_read_out |    pointer   |
+|input_14_V_read_out_write   | out |    1|   ap_fifo  | input_14_V_read_out |    pointer   |
+|input_15_V_read_out_din     | out |   16|   ap_fifo  | input_15_V_read_out |    pointer   |
+|input_15_V_read_out_full_n  |  in |    1|   ap_fifo  | input_15_V_read_out |    pointer   |
+|input_15_V_read_out_write   | out |    1|   ap_fifo  | input_15_V_read_out |    pointer   |
+|input_16_V_read_out_din     | out |   16|   ap_fifo  | input_16_V_read_out |    pointer   |
+|input_16_V_read_out_full_n  |  in |    1|   ap_fifo  | input_16_V_read_out |    pointer   |
+|input_16_V_read_out_write   | out |    1|   ap_fifo  | input_16_V_read_out |    pointer   |
+|input_17_V_read_out_din     | out |   16|   ap_fifo  | input_17_V_read_out |    pointer   |
+|input_17_V_read_out_full_n  |  in |    1|   ap_fifo  | input_17_V_read_out |    pointer   |
+|input_17_V_read_out_write   | out |    1|   ap_fifo  | input_17_V_read_out |    pointer   |
++----------------------------+-----+-----+------------+---------------------+--------------+
+

@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_entry_proc_proc312'
+================================================================
+* Date:           Wed Apr  5 19:40:03 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.100 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       15|       15| 60.000 ns | 60.000 ns |   15|   15|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|    9629|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|     157|    -|
+|Register             |        -|      -|     1164|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|     1164|    9786|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |       2|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|    ~0   |       1|    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+-------+---+------+------------+------------+
+    |       Variable Name      | Operation| DSP48E| FF|  LUT | Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+-------+---+------+------------+------------+
+    |add_ln203_fu_128_p2       |     +    |      0|  0|    59|          59|          59|
+    |and_ln203_1_fu_275_p2     |    and   |      0|  0|   511|         512|         512|
+    |and_ln203_2_fu_280_p2     |    and   |      0|  0|   511|         512|         512|
+    |and_ln203_fu_263_p2       |    and   |      0|  0|   511|         512|         512|
+    |icmp_ln203_fu_161_p2      |   icmp   |      0|  0|    13|           9|           9|
+    |lshr_ln203_fu_257_p2      |   lshr   |      0|  0|  2171|           2|         512|
+    |ap_block_state1           |    or    |      0|  0|     2|           1|           1|
+    |or_ln203_1_fu_286_p2      |    or    |      0|  0|   511|         512|         512|
+    |or_ln203_fu_155_p2        |    or    |      0|  0|     9|           9|           4|
+    |select_ln203_3_fu_193_p3  |  select  |      0|  0|    10|           1|          10|
+    |select_ln203_4_fu_201_p3  |  select  |      0|  0|    10|           1|          10|
+    |select_ln203_5_fu_243_p3  |  select  |      0|  0|   428|           1|         512|
+    |select_ln203_fu_185_p3    |  select  |      0|  0|    10|           1|          10|
+    |shl_ln203_1_fu_251_p2     |    shl   |      0|  0|  2171|           2|         512|
+    |shl_ln203_fu_227_p2       |    shl   |      0|  0|  2171|         512|         512|
+    |xor_ln203_1_fu_209_p2     |    xor   |      0|  0|    10|          10|           9|
+    |xor_ln203_2_fu_269_p2     |    xor   |      0|  0|   511|           2|         512|
+    |xor_ln203_fu_179_p2       |    xor   |      0|  0|    10|          10|           9|
+    +--------------------------+----------+-------+---+------+------------+------------+
+    |Total                     |          |      0|  0|  9629|        2668|        4729|
+    +--------------------------+----------+-------+---+------+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  85|         17|    1|         17|
+    |ap_done                   |   9|          2|    1|          2|
+    |i_0_i_c10_blk_n           |   9|          2|    1|          2|
+    |out_layer_V_blk_n_AR      |   9|          2|    1|          2|
+    |out_layer_V_blk_n_AW      |   9|          2|    1|          2|
+    |out_layer_V_blk_n_B       |   9|          2|    1|          2|
+    |out_layer_V_blk_n_R       |   9|          2|    1|          2|
+    |out_layer_V_blk_n_W       |   9|          2|    1|          2|
+    |out_layer_V_offset_blk_n  |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 157|         33|    9|         33|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------+-----+----+-----+-----------+
+    |              Name             |  FF | LUT| Bits| Const Bits|
+    +-------------------------------+-----+----+-----+-----------+
+    |add_ln203_reg_292              |   59|   0|   59|          0|
+    |ap_CS_fsm                      |   16|   0|   16|          0|
+    |ap_done_reg                    |    1|   0|    1|          0|
+    |or_ln203_1_reg_314             |  512|   0|  512|          0|
+    |out_layer_V_addr_read_reg_309  |  512|   0|  512|          0|
+    |out_layer_V_addr_reg_302       |   59|   0|   64|          5|
+    |trunc_ln203_reg_297            |    5|   0|    5|          0|
+    +-------------------------------+-----+----+-----+-----------+
+    |Total                          | 1164|   0| 1169|          5|
+    +-------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+--------------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++----------------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                      |  in |    1| ap_ctrl_hs | Block_entry_proc_proc312 | return value |
+|ap_rst                      |  in |    1| ap_ctrl_hs | Block_entry_proc_proc312 | return value |
+|ap_start                    |  in |    1| ap_ctrl_hs | Block_entry_proc_proc312 | return value |
+|ap_done                     | out |    1| ap_ctrl_hs | Block_entry_proc_proc312 | return value |
+|ap_continue                 |  in |    1| ap_ctrl_hs | Block_entry_proc_proc312 | return value |
+|ap_idle                     | out |    1| ap_ctrl_hs | Block_entry_proc_proc312 | return value |
+|ap_ready                    | out |    1| ap_ctrl_hs | Block_entry_proc_proc312 | return value |
+|m_axi_out_layer_V_AWVALID   | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWREADY   |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWADDR    | out |   64|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWID      | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWLEN     | out |   32|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWSIZE    | out |    3|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWBURST   | out |    2|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWLOCK    | out |    2|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWCACHE   | out |    4|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWPROT    | out |    3|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWQOS     | out |    4|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWREGION  | out |    4|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_AWUSER    | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_WVALID    | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_WREADY    |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_WDATA     | out |  512|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_WSTRB     | out |   64|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_WLAST     | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_WID       | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_WUSER     | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARVALID   | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARREADY   |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARADDR    | out |   64|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARID      | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARLEN     | out |   32|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARSIZE    | out |    3|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARBURST   | out |    2|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARLOCK    | out |    2|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARCACHE   | out |    4|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARPROT    | out |    3|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARQOS     | out |    4|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARREGION  | out |    4|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_ARUSER    | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_RVALID    |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_RREADY    | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_RDATA     |  in |  512|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_RLAST     |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_RID       |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_RUSER     |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_RRESP     |  in |    2|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_BVALID    |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_BREADY    | out |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_BRESP     |  in |    2|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_BID       |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|m_axi_out_layer_V_BUSER     |  in |    1|    m_axi   |        out_layer_V       |    pointer   |
+|out_layer_V_offset_dout     |  in |   58|   ap_fifo  |    out_layer_V_offset    |    pointer   |
+|out_layer_V_offset_empty_n  |  in |    1|   ap_fifo  |    out_layer_V_offset    |    pointer   |
+|out_layer_V_offset_read     | out |    1|   ap_fifo  |    out_layer_V_offset    |    pointer   |
+|i_0_i_c10_dout              |  in |   14|   ap_fifo  |         i_0_i_c10        |    pointer   |
+|i_0_i_c10_empty_n           |  in |    1|   ap_fifo  |         i_0_i_c10        |    pointer   |
+|i_0_i_c10_read              | out |    1|   ap_fifo  |         i_0_i_c10        |    pointer   |
+|out_buf_0_V                 |  in |   16|   ap_none  |        out_buf_0_V       |    pointer   |
++----------------------------+-----+-----+------------+--------------------------+--------------+
+

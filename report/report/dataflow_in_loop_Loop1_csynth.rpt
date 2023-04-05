@@ -1,0 +1,356 @@
+
+
+================================================================
+== Vivado HLS Report for 'dataflow_in_loop_Loop1'
+================================================================
+* Date:           Wed Apr  5 19:40:04 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.100 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       46|       46| 0.184 us | 0.184 us |   30|   30| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+--------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |                             |                          |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+        |           Instance          |          Module          |   min   |   max   |    min    |    max    | min | max |   Type   |
+        +-----------------------------+--------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        |ereg_v1_U0                   |ereg_v1                   |       29|       29|  0.116 us |  0.116 us |    1|    1| dataflow |
+        |Block_entry_proc_proc312_U0  |Block_entry_proc_proc312  |       15|       15| 60.000 ns | 60.000 ns |   15|   15|   none   |
+        |Loop2_proc11_U0              |Loop2_proc11              |       29|       29|  0.116 us |  0.116 us |   29|   29|   none   |
+        |Block_entry_proc_proc_U0     |Block_entry_proc_proc     |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        |Block_entry_proc_proc303_U0  |Block_entry_proc_proc303  |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        |Block_entry_proc_proc304_U0  |Block_entry_proc_proc304  |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        |Block_entry_proc_proc305_U0  |Block_entry_proc_proc305  |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        |Block_entry_proc_proc306_U0  |Block_entry_proc_proc306  |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        |Block_entry_proc_proc307_U0  |Block_entry_proc_proc307  |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        |Block_entry_proc_proc308_U0  |Block_entry_proc_proc308  |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        |Block_entry_proc_proc309_U0  |Block_entry_proc_proc309  |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        |Block_entry_proc_proc310_U0  |Block_entry_proc_proc310  |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        |Block_entry_proc_proc311_U0  |Block_entry_proc_proc311  |        1|        1|  4.000 ns |  4.000 ns |    1|    1|   none   |
+        +-----------------------------+--------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|      62|    -|
+|FIFO                 |        0|      -|      115|     664|    -|
+|Instance             |        0|    957|    48498|   49534|    -|
+|Memory               |      150|      -|        0|       0|    0|
+|Multiplexer          |        -|      -|        -|     126|    -|
+|Register             |        -|      -|       16|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |      150|    957|    48629|   50386|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |       11|     32|        5|      11|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        5|     16|        2|       5|    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+--------------------------+---------+-------+-------+-------+-----+
+    |           Instance          |          Module          | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +-----------------------------+--------------------------+---------+-------+-------+-------+-----+
+    |Block_entry_proc_proc_U0     |Block_entry_proc_proc     |        0|      0|      3|     44|    0|
+    |Block_entry_proc_proc303_U0  |Block_entry_proc_proc303  |        0|      0|      3|     35|    0|
+    |Block_entry_proc_proc304_U0  |Block_entry_proc_proc304  |        0|      0|      3|     35|    0|
+    |Block_entry_proc_proc305_U0  |Block_entry_proc_proc305  |        0|      0|      3|     35|    0|
+    |Block_entry_proc_proc306_U0  |Block_entry_proc_proc306  |        0|      0|      3|     35|    0|
+    |Block_entry_proc_proc307_U0  |Block_entry_proc_proc307  |        0|      0|      3|     35|    0|
+    |Block_entry_proc_proc308_U0  |Block_entry_proc_proc308  |        0|      0|      3|     35|    0|
+    |Block_entry_proc_proc309_U0  |Block_entry_proc_proc309  |        0|      0|      3|     35|    0|
+    |Block_entry_proc_proc310_U0  |Block_entry_proc_proc310  |        0|      0|      3|     35|    0|
+    |Block_entry_proc_proc311_U0  |Block_entry_proc_proc311  |        0|      0|      3|     35|    0|
+    |Block_entry_proc_proc312_U0  |Block_entry_proc_proc312  |        0|      0|   1164|   9786|    0|
+    |Loop2_proc11_U0              |Loop2_proc11              |        0|      0|    822|   5662|    0|
+    |ereg_v1_U0                   |ereg_v1                   |        0|    957|  46482|  33727|    0|
+    +-----------------------------+--------------------------+---------+-------+-------+-------+-----+
+    |Total                        |                          |        0|    957|  48498|  49534|    0|
+    +-----------------------------+--------------------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +-----------------+-------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |      Memory     |                Module               | BRAM_18K| FF| LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +-----------------+-------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |in_store_0_V_U   |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    |in_store_1_V_U   |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    |in_store_2_V_U   |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    |in_store_11_V_U  |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    |in_store_12_V_U  |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    |in_store_13_V_U  |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    |in_store_14_V_U  |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    |in_store_15_V_U  |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    |in_store_16_V_U  |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    |in_store_17_V_U  |dataflow_in_loop_Loop1_in_store_0_V  |       15|  0|   0|    0|  16384|   16|     2|       524288|
+    +-----------------+-------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |Total            |                                     |      150|  0|   0|    0| 163840|  160|    20|      5242880|
+    +-----------------+-------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |i_0_i_c10_U             |        0|  5|   0|    -|     3|   14|       42|
+    |i_0_i_c1_U              |        0|  5|   0|    -|     2|   14|       28|
+    |i_0_i_c2_U              |        0|  5|   0|    -|     2|   14|       28|
+    |i_0_i_c3_U              |        0|  5|   0|    -|     2|   14|       28|
+    |i_0_i_c4_U              |        0|  5|   0|    -|     2|   14|       28|
+    |i_0_i_c5_U              |        0|  5|   0|    -|     2|   14|       28|
+    |i_0_i_c6_U              |        0|  5|   0|    -|     2|   14|       28|
+    |i_0_i_c7_U              |        0|  5|   0|    -|     2|   14|       28|
+    |i_0_i_c8_U              |        0|  5|   0|    -|     2|   14|       28|
+    |i_0_i_c9_U              |        0|  5|   0|    -|     2|   14|       28|
+    |i_0_i_c_U               |        0|  5|   0|    -|     2|   14|       28|
+    |in_buf_0_V_U            |        0|  5|   0|    -|     2|   16|       32|
+    |in_buf_11_V_U           |        0|  5|   0|    -|     2|   16|       32|
+    |in_buf_12_V_U           |        0|  5|   0|    -|     2|   16|       32|
+    |in_buf_13_V_U           |        0|  5|   0|    -|     2|   16|       32|
+    |in_buf_14_V_U           |        0|  5|   0|    -|     2|   16|       32|
+    |in_buf_15_V_U           |        0|  5|   0|    -|     2|   16|       32|
+    |in_buf_16_V_U           |        0|  5|   0|    -|     2|   16|       32|
+    |in_buf_17_V_U           |        0|  5|   0|    -|     2|   16|       32|
+    |in_buf_1_V_U            |        0|  5|   0|    -|     2|   16|       32|
+    |in_buf_2_V_U            |        0|  5|   0|    -|     2|   16|       32|
+    |out_buf_0_V_U           |        0|  5|   0|    -|     2|   16|       32|
+    |out_layer_V_offset_c_U  |        0|  5|   0|    -|     4|   58|      232|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |Total                   |        0|115|   0|    0|    49|  388|      906|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    +----------------------------------------------+----------+-------+---+----+------------+------------+
+    |                 Variable Name                | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------------------+----------+-------+---+----+------------+------------+
+    |Block_entry_proc_proc312_U0_ap_ready_count    |     +    |      0|  0|   3|           2|           1|
+    |Loop2_proc11_U0_ap_ready_count                |     +    |      0|  0|   3|           2|           1|
+    |Block_entry_proc_proc312_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |Loop2_proc11_U0_ap_continue                   |    and   |      0|  0|   2|           1|           1|
+    |Loop2_proc11_U0_ap_start                      |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_0_V                  |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_11_V                 |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_12_V                 |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_13_V                 |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_14_V                 |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_15_V                 |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_16_V                 |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_17_V                 |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_1_V                  |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_in_store_2_V                  |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                                       |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready                                 |    and   |      0|  0|   2|           1|           1|
+    |ereg_v1_U0_ap_start                           |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_Block_entry_proc_proc312_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_Loop2_proc11_U0_ap_ready              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_0_V            |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_11_V           |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_12_V           |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_13_V           |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_14_V           |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_15_V           |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_16_V           |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_17_V           |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_1_V            |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_in_store_2_V            |    or    |      0|  0|   2|           1|           1|
+    +----------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                         |          |      0|  0|  62|          32|          30|
+    +----------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                       | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |Block_entry_proc_proc312_U0_ap_ready_count        |   9|          2|    2|          4|
+    |Loop2_proc11_U0_ap_ready_count                    |   9|          2|    2|          4|
+    |ap_sync_reg_Block_entry_proc_proc312_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_Loop2_proc11_U0_ap_ready              |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_0_V            |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_11_V           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_12_V           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_13_V           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_14_V           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_15_V           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_16_V           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_17_V           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_1_V            |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_in_store_2_V            |   9|          2|    1|          2|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                             | 126|         28|   16|         32|
+    +--------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------+---+----+-----+-----------+
+    |                       Name                       | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------------+---+----+-----+-----------+
+    |Block_entry_proc_proc312_U0_ap_ready_count        |  2|   0|    2|          0|
+    |Loop2_proc11_U0_ap_ready_count                    |  2|   0|    2|          0|
+    |ap_sync_reg_Block_entry_proc_proc312_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_Loop2_proc11_U0_ap_ready              |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_0_V            |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_11_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_12_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_13_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_14_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_15_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_16_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_17_V           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_1_V            |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_in_store_2_V            |  1|   0|    1|          0|
+    +--------------------------------------------------+---+----+-----+-----------+
+    |Total                                             | 16|   0|   16|          0|
+    +--------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+------------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++----------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                      |  in |    1| ap_ctrl_hs | dataflow_in_loop_Loop1 | return value |
+|ap_rst                      |  in |    1| ap_ctrl_hs | dataflow_in_loop_Loop1 | return value |
+|ap_start                    |  in |    1| ap_ctrl_hs | dataflow_in_loop_Loop1 | return value |
+|ap_done                     | out |    1| ap_ctrl_hs | dataflow_in_loop_Loop1 | return value |
+|ap_ready                    | out |    1| ap_ctrl_hs | dataflow_in_loop_Loop1 | return value |
+|ap_idle                     | out |    1| ap_ctrl_hs | dataflow_in_loop_Loop1 | return value |
+|ap_continue                 |  in |    1| ap_ctrl_hs | dataflow_in_loop_Loop1 | return value |
+|m_axi_in_layer_V_AWVALID    | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWREADY    |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWADDR     | out |   64|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWID       | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWLEN      | out |   32|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWSIZE     | out |    3|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWBURST    | out |    2|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWLOCK     | out |    2|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWCACHE    | out |    4|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWPROT     | out |    3|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWQOS      | out |    4|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWREGION   | out |    4|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_AWUSER     | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_WVALID     | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_WREADY     |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_WDATA      | out |  512|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_WSTRB      | out |   64|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_WLAST      | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_WID        | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_WUSER      | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARVALID    | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARREADY    |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARADDR     | out |   64|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARID       | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARLEN      | out |   32|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARSIZE     | out |    3|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARBURST    | out |    2|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARLOCK     | out |    2|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARCACHE    | out |    4|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARPROT     | out |    3|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARQOS      | out |    4|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARREGION   | out |    4|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_ARUSER     | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_RVALID     |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_RREADY     | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_RDATA      |  in |  512|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_RLAST      |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_RID        |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_RUSER      |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_RRESP      |  in |    2|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_BVALID     |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_BREADY     | out |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_BRESP      |  in |    2|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_BID        |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|m_axi_in_layer_V_BUSER      |  in |    1|    m_axi   |       in_layer_V       |    pointer   |
+|in_layer_V_offset           |  in |   58|   ap_none  |    in_layer_V_offset   |    scalar    |
+|in_layer_V_offset_ap_vld    |  in |    1|   ap_none  |    in_layer_V_offset   |    scalar    |
+|i_0_i                       |  in |   15|   ap_none  |          i_0_i         |    scalar    |
+|i_0_i_ap_vld                |  in |    1|   ap_none  |          i_0_i         |    scalar    |
+|m_axi_out_layer_V_AWVALID   | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWREADY   |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWADDR    | out |   64|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWID      | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWLEN     | out |   32|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWSIZE    | out |    3|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWBURST   | out |    2|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWLOCK    | out |    2|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWCACHE   | out |    4|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWPROT    | out |    3|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWQOS     | out |    4|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWREGION  | out |    4|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_AWUSER    | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_WVALID    | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_WREADY    |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_WDATA     | out |  512|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_WSTRB     | out |   64|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_WLAST     | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_WID       | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_WUSER     | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARVALID   | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARREADY   |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARADDR    | out |   64|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARID      | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARLEN     | out |   32|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARSIZE    | out |    3|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARBURST   | out |    2|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARLOCK    | out |    2|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARCACHE   | out |    4|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARPROT    | out |    3|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARQOS     | out |    4|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARREGION  | out |    4|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_ARUSER    | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_RVALID    |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_RREADY    | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_RDATA     |  in |  512|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_RLAST     |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_RID       |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_RUSER     |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_RRESP     |  in |    2|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_BVALID    |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_BREADY    | out |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_BRESP     |  in |    2|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_BID       |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|m_axi_out_layer_V_BUSER     |  in |    1|    m_axi   |       out_layer_V      |    pointer   |
+|out_layer_V_offset          |  in |   58|   ap_none  |   out_layer_V_offset   |    scalar    |
+|out_layer_V_offset_ap_vld   |  in |    1|   ap_none  |   out_layer_V_offset   |    scalar    |
++----------------------------+-----+-----+------------+------------------------+--------------+
+
