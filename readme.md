@@ -20,7 +20,6 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alv
 ```
 ## Some detail
 ```bash
-The model contains a zeropad and a conv2d layer.
-Both of them are 8 channel input and output.
-The input and output port connect to different HBM.
+1. Modify dataflow
+2. You can adjust the "loop_times" variable in host code to control the event number.
 ```
