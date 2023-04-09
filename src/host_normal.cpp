@@ -1,4 +1,4 @@
-/********** 
+/**********
 Copyright (c) 2018, Xilinx, Inc.
 All rights reserved.
 Redistribution and use in source and binary forms, with or without modification,
@@ -49,7 +49,7 @@ static uint64_t get_duration_ns(const cl::Event & events) {
 
 int main(int argc, char** argv)
 {
-    std::cout<<"============host_normalcpp==========="<<std::endl;
+    std::cout<<"============host_normal.cpp==========="<<std::endl;
     std::cout<<"4CU"<<std::endl;
     std::cout<<"Normal computation"<<std::endl;
     std::cout<<"====================================="<<std::endl;
