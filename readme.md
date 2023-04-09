@@ -25,8 +25,17 @@ There are 4 CUs.
 Split input(output) in two part and take two times to compute.
 
 host1.cpp:
-There are only 1 CUs running.(test code)
+There are only 1 CUs running.
 Add an iteration variable to manipulate the iteration times.
+
+host_2HBM.cpp:
+There are only 1 CUs running.
+Use 2 HBM bank in ping-pong fashion.
+
+host_normal.cpp:
+There are 4 CUs.
+Compute parallel.
+
 ```
 ## Learn from Vitis tutorial
 ```bash
