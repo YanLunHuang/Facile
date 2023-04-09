@@ -27,7 +27,7 @@ Split input(output) in two part and take two times to compute.
 host_iteration.cpp:
 There are only 1 CUs running.
 Add an iteration variable to manipulate the iteration times.
-Input(output) is Splitted based on the iteration variable.
+Input(output) is splitted based on the iteration variable.
 
 host_2HBM.cpp:
 There are only 1 CUs running.
