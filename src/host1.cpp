@@ -144,7 +144,7 @@ int main(int argc, char** argv)
         
         std::string cu_id = std::to_string(1);
         std::string krnl_name_full = "alveo_hls4ml";
-        printf("Creating a kernel [%s] for CU %d %d %d %d\n", krnl_name_full.c_str(), 0, 1, 2, 3);
+        printf("Creating a kernel [%s] for CU %d\n", krnl_name_full.c_str(), 0);
         alveo_hls4ml_1 = cl::Kernel(program,"alveo_hls4ml:{alveo_hls4ml_1}");
         alveo_hls4ml_2 = cl::Kernel(program,"alveo_hls4ml:{alveo_hls4ml_2}");
         alveo_hls4ml_3 = cl::Kernel(program,"alveo_hls4ml:{alveo_hls4ml_3}");
