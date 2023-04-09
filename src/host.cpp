@@ -1,5 +1,5 @@
 /**********
-Copyright (c) 2018, Xilinx, Inc. 
+Copyright (c) 2018, Xilinx, Inc.
 All rights reserved.
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -49,7 +49,10 @@ static uint64_t get_duration_ns(const cl::Event & events) {
 
 int main(int argc, char** argv)
 {
-    std::cout<<"===========host.cpp==========="<<std::endl;
+    std::cout<<"==============host.cpp==============="<<std::endl;
+    std::cout<<"4CU"<<std::endl;
+    std::cout<<"Split into 2 buffers in every CU"<<std::endl;
+    std::cout<<"====================================="<<std::endl;
     int event_num=100;
     cl_int err;
     cl::Kernel alveo_hls4ml_1;
@@ -489,40 +492,26 @@ int main(int argc, char** argv)
         /*
         std::cout << "Read_1 time: " << duration_ns1_R/event_num << " ns" << std::endl;
         fout << "Read_1 time: " << duration_ns1_R/event_num << " ns \n";
-
         std::cout << "kernel_1 time: " << duration_ns1_K/event_num << " ns" << std::endl;
         fout << "kernel_1 time: " << duration_ns1_K/event_num << " ns \n";
-
         std::cout << "Write_1 time: " << duration_ns1_W/event_num << " ns" << std::endl;
         fout << "Write_1 time: " << duration_ns1_W/event_num << " ns \n";
-
-
         std::cout << "Read_2 time: " << duration_ns2_R/event_num << " ns" << std::endl;
         fout << "Read_2 time: " << duration_ns2_R/event_num << " ns \n";
-
         std::cout << "kernel_2 time: " << duration_ns2_K/event_num << " ns" << std::endl;
         fout << "kernel_2 time: " << duration_ns2_K/event_num << " ns \n";
-
         std::cout << "Write_2 time: " << duration_ns2_W/event_num << " ns" << std::endl;
         fout << "Write_2 time: " << duration_ns2_W/event_num << " ns \n";
-
-
         std::cout << "Read_3 time: " << duration_ns3_R/event_num << " ns" << std::endl;
         fout << "Read_3 time: " << duration_ns3_R/event_num << " ns \n";
-
         std::cout << "kernel_3 time: " << duration_ns3_K/event_num << " ns" << std::endl;
         fout << "kernel_3 time: " << duration_ns3_K/event_num << " ns \n";
-
         std::cout << "Write_3 time: " << duration_ns3_W/event_num << " ns" << std::endl;
         fout << "Write_3 time: " << duration_ns3_W/event_num << " ns \n";
-
-
         std::cout << "Read_4 time: " << duration_ns4_R/event_num << " ns" << std::endl;
         fout << "Read_4 time: " << duration_ns4_R/event_num << " ns \n";
-
         std::cout << "kernel_4 time: " << duration_ns4_K/event_num << " ns" << std::endl;
         fout << "kernel_4 time: " << duration_ns4_K/event_num << " ns \n";
-
         std::cout << "Write_4 time: " << duration_ns4_W/event_num << " ns" << std::endl;
         fout << "Write_4 time: " << duration_ns4_W/event_num << " ns \n";
         */
