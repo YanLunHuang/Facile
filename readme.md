@@ -24,6 +24,10 @@ host.cpp:
 There are 4 CUs.
 Split input(output) in two part and take two times to compute.
 
+host_2HBM_4CU.cpp:
+There are 4 CUs.
+Use 2 HBM bank in ping-pong fashion.
+
 host_iteration.cpp:
 There are only 1 CUs running.
 Add an iteration variable to manipulate the iteration times.
