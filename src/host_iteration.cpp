@@ -49,7 +49,10 @@ static uint64_t get_duration_ns(const cl::Event & events) {
 
 int main(int argc, char** argv)
 {
-    std::cout<<"===========host1.cpp==========="<<std::endl;
+    std::cout<<"===================host_iteration.cpp====================="<<std::endl;
+    std::cout<<"1CU"<<std::endl;
+    std::cout<<"Input(output) is splitted based on the iteration variable."<<std::endl;
+    std::cout<<"=========================================================="<<std::endl;
     int event_num=100;
     cl_int err;
     cl::Kernel alveo_hls4ml_1;
