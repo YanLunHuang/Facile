@@ -1,7 +1,7 @@
 /**********
 Copyright (c) 2018, Xilinx, Inc.
 All rights reserved.
-Redistribution and use in source and binary forms,  with or without modification,
+Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
 1. Redistributions of source code must retain the above copyright notice,
 this list of conditions and the following disclaimer.
@@ -114,14 +114,10 @@ int main(int argc, char** argv)
     cl::Device device = devices[0];
 
     cl::Context context(device);
-    //cl::CommandQueue q1(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
-    //cl::CommandQueue q2(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
-    //cl::CommandQueue q3(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
-    //cl::CommandQueue q4(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
     cl::CommandQueue q1(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
-    cl::CommandQueue q2(context, device, CL_QUEUE_PROFILING_ENABLE);
-    cl::CommandQueue q3(context, device, CL_QUEUE_PROFILING_ENABLE);
-    cl::CommandQueue q4(context, device, CL_QUEUE_PROFILING_ENABLE);
+    cl::CommandQueue q2(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
+    cl::CommandQueue q3(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
+    cl::CommandQueue q4(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
     std::string device_name = device.getInfo<CL_DEVICE_NAME>(); 
     std::cout << "Found Device=" << device_name.c_str() << std::endl;
     
