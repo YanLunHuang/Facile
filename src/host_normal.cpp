@@ -1,4 +1,4 @@
-/********** 
+/**********
 Copyright (c) 2018, Xilinx, Inc.
 All rights reserved.
 Redistribution and use in source and binary forms, with or without modification,
@@ -114,10 +114,6 @@ int main(int argc, char** argv)
     cl::Device device = devices[0];
 
     cl::Context context(device);
-    //cl::CommandQueue q1(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
-    //cl::CommandQueue q2(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
-    //cl::CommandQueue q3(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
-    //cl::CommandQueue q4(context, device, CL_QUEUE_PROFILING_ENABLE | CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE);
     cl::CommandQueue q1(context, device, CL_QUEUE_PROFILING_ENABLE);
     cl::CommandQueue q2(context, device, CL_QUEUE_PROFILING_ENABLE);
     cl::CommandQueue q3(context, device, CL_QUEUE_PROFILING_ENABLE);
