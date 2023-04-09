@@ -45,4 +45,5 @@ Compute parallel.
 ## Learn from Vitis tutorial
 ```bash
 https://github.com/Xilinx/Vitis-Tutorials/blob/2021.2/Hardware_Acceleration/Design_Tutorials/02-bloom/5_data-movement.md
+https://github.com/Xilinx/Vitis-Tutorials/blob/2021.1/Hardware_Acceleration/Design_Tutorials/02-bloom/6_using-multiple-ddr.md
 ```
