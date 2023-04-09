@@ -16,11 +16,19 @@ make TARGET=hw DEVICE=xilinx_u50_xdma_201920_1 all # build
 ```bash
 XCL_EMULATION_MODE=sw_emu ./host ./build_dir.sw_emu.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin  # software emulation
 XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin  # hardware emulation
-./host alveo_hls4ml.xclbin  # run on U50
+./host build_dir.hw.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin  # run on U50
 ```
 ## Some detail
 ```bash
-The model contains a zeropad and a conv2d layer.
-Both of them are 8 channel input and output.
-The input and output port connect to different HBM.
+host.cpp:
+There are 4 CUs.
+Split input(output) in two part and take two times to compute.
+
+host1.cpp:
+There are only 1 CUs running.(test code)
+Add an iteration variable to manipulate the iteration times.
+```
+## Learn from Vitis tutorial
+```bash
+https://github.com/Xilinx/Vitis-Tutorials/blob/2021.2/Hardware_Acceleration/Design_Tutorials/02-bloom/5_data-movement.md
 ```
