@@ -344,8 +344,8 @@ int main(int argc, char** argv)
 
         //print timing
         if(i==event_num-1){
-        std::cout << "FPGA time(4CU): " << duration_total/event_num << " ns" << std::endl;
-        fout << "FPGA time(4CU): " << duration_total/event_num << " ns \n";
+        std::cout << "FPGA time(1CU): " << duration_total/event_num << " ns" << std::endl;
+        fout << "FPGA time(1CU): " << duration_total/event_num << " ns \n";
         }
     }
 //=====================
