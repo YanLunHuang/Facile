@@ -20,30 +20,17 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alv
 ```
 ## Some detail
 ```bash
-host.cpp:
-There are 4 CUs.
-Split input(output) in two part and take two times to compute.
-
-host_2HBM_4CU.cpp:
-There are 4 CUs.
-Use 2 HBM bank in ping-pong fashion.
-
-host_iteration.cpp:
-There are only 1 CUs running.
-Add an iteration variable to manipulate the iteration times.
-Input(output) is splitted based on the iteration variable.
-
-host_2HBM.cpp:
-There are only 1 CUs running.
-Use 2 HBM bank in ping-pong fashion.
 
 host_normal.cpp:
-There are 4 CUs.
-Compute parallel.
+4 CUs can do parallel computation.
 
-```
-## Learn from Vitis tutorial
-```bash
-https://github.com/Xilinx/Vitis-Tutorials/blob/2021.2/Hardware_Acceleration/Design_Tutorials/02-bloom/5_data-movement.md
-https://github.com/Xilinx/Vitis-Tutorials/blob/2021.1/Hardware_Acceleration/Design_Tutorials/02-bloom/6_using-multiple-ddr.md
+host_Nbuffer.cpp:
+Apply multiple buffers for each CU.
+
+host_4HBM.cpp:
+Apply multiple buffers for each CU.
+Use 4 HBM bank in ping-pong fashion.
+
+
+
 ```
